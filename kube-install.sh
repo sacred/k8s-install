@@ -1,3 +1,4 @@
+#kube-install.sh 
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
 name=Kubernetes
