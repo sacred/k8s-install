@@ -25,7 +25,6 @@ net.bridge.bridge-nf-call-iptables = 1
 EOF
 sysctl --system
 
-
 #1. pull docker from sacred02's repos(ALL NODES)
 docker pull sacred02/kube-apiserver:v1.14.0;
 docker pull sacred02/kube-controller-manager:v1.14.0;
@@ -47,7 +46,6 @@ docker tag sacred02/coredns:1.3.1 k8s.gcr.io/coredns:1.3.1;
 docker tag sacred02/pause:3.1 k8s.gcr.io/pause:3.1;
 docker tag sacred02/flannel:v0.11.0-amd64 quay.io/coreos/flannel:v0.11.0-amd64
 docker tag sacred02/kubernetes-dashboard-amd64:v1.10.1 k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1;
-
 
 #3. remove sacred02's images(ALL NODES)
 docker rmi $(docker images -a | grep sacred02 | awk '{print $1":"$2}')kube-install.sh 
