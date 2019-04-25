@@ -20,6 +20,7 @@ yum install -y docker kubelet-1.14.1-0.x86_64 kubectl-1.14.1-0.x86_64 kubeadm-1.
 systemctl enable --now docker
 systemctl enable --now kubelet
 
+
 cat <<EOF >  /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
