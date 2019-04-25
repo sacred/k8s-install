@@ -50,5 +50,6 @@ docker tag sacred02/flannel:v0.11.0-amd64 quay.io/coreos/flannel:v0.11.0-amd64
 docker tag sacred02/kubernetes-dashboard-amd64:v1.10.1 k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1;
 
 #3. remove sacred02's images(ALL NODES)
-docker rmi $(docker images -a | grep sacred02 | awk '{print $1":"$2}')kube-install.sh 
+docker rmi $(docker images -a | grep sacred02 | awk '{print $1":"$2}')
+
 
