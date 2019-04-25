@@ -15,8 +15,9 @@ setenforce 0
 sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 
 #yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
-yum install -y kubelet-1.14.1-0.x86_64 kubectl-1.14.1-0.x86_64 kubeadm-1.14.1-0.x86_64  --disableexcludes=kubernetes
+yum install -y docker kubelet-1.14.1-0.x86_64 kubectl-1.14.1-0.x86_64 kubeadm-1.14.1-0.x86_64  --disableexcludes=kubernetes
 
+systemctl enable --now docker
 systemctl enable --now kubelet
 
 cat <<EOF >  /etc/sysctl.d/k8s.conf
