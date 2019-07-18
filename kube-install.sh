@@ -28,10 +28,10 @@ EOF
 sysctl --system
 
 #1. pull docker from sacred02's repos(ALL NODES)
-docker pull sacred02/kube-apiserver:v1.14.0;
-docker pull sacred02/kube-controller-manager:v1.14.0;
-docker pull sacred02/kube-scheduler:v1.14.0;
-docker pull sacred02/kube-proxy:v1.14.0;
+docker pull sacred02/kube-apiserver:v1.14.1;
+docker pull sacred02/kube-controller-manager:v1.14.1;
+docker pull sacred02/kube-scheduler:v1.14.1;
+docker pull sacred02/kube-proxy:v1.14.1;
 docker pull sacred02/etcd:3.3.10;
 docker pull sacred02/coredns:1.3.1;
 docker pull sacred02/pause:3.1;
@@ -39,10 +39,10 @@ docker pull sacred02/flannel:v0.11.0-amd64;
 docker pull sacred02/kubernetes-dashboard-amd64:v1.10.1;
 
 #2. tar to k8s default repos(ALL NODES)
-docker tag sacred02/kube-apiserver:v1.14.0 k8s.gcr.io/kube-apiserver:v1.14.0;
-docker tag sacred02/kube-controller-manager:v1.14.0 k8s.gcr.io/kube-controller-manager:v1.14.0;
-docker tag sacred02/kube-scheduler:v1.14.0 k8s.gcr.io/kube-scheduler:v1.14.0;
-docker tag sacred02/kube-proxy:v1.14.0 k8s.gcr.io/kube-proxy:v1.14.0;
+docker tag sacred02/kube-apiserver:v1.14.1 k8s.gcr.io/kube-apiserver:v1.14.1;
+docker tag sacred02/kube-controller-manager:v1.14.1 k8s.gcr.io/kube-controller-manager:v1.14.1;
+docker tag sacred02/kube-scheduler:v1.14.1 k8s.gcr.io/kube-scheduler:v1.14.1;
+docker tag sacred02/kube-proxy:v1.14.1 k8s.gcr.io/kube-proxy:v1.14.1;
 docker tag sacred02/etcd:3.3.10 k8s.gcr.io/etcd:3.3.10;
 docker tag sacred02/coredns:1.3.1 k8s.gcr.io/coredns:1.3.1;
 docker tag sacred02/pause:3.1 k8s.gcr.io/pause:3.1;
